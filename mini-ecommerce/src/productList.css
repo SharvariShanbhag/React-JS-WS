@@ -1,0 +1,29 @@
+.cardOne {
+    width: 18rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    margin: 25px;
+    
+  }
+  
+  .cardOne:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .product-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    gap: 20px; 
+  }
+  
+  .card {
+    flex: 1 1 calc(25% - 20px); 
+    max-width: 18rem; 
+  }
+  

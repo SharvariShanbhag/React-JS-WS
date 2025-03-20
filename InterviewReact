@@ -1,0 +1,28 @@
+
+- what is react and what is its main features ?
+- what is jsx(javaScript XML) and why it is used in react?
+- how do you create a new react app using nre react app?
+- explain the concept of the react app?
+- how does react differ from other js framework? 
+     .angular 
+     .view
+
+-
+
+-How do you update a state of a component?
+- What are lifecycle method in react?
+- How do functional components manage state using hooks
+- What is difference between state and props
+
+- How do you Handel events in react.
+- What is synthetic event in react.
+- How do you pass arguments to event handlers in react.
+- Explain the role of preventDefault() in React event handling.
+- How do you bind event handlers in class components.
+
+-what is conditional rendering in react?
+- how do you implement conditional rendering in react?
+- what are the different ways to conditionally render elements in react?
+- how do you handle multiple coditions in react rendering?
+- can you use logical && operatior for conditional rendering?proovide an example.
+
