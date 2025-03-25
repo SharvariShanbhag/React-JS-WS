@@ -61,13 +61,13 @@ const AddTask = ({ state, dispatch }) => { // ✅ Accept state & dispatch
                 <td>{task.tName}</td>
                 <td>{task.tDiscri}</td>
                 <td>
-                  <button className="btn btn-success btn-sm" onClick={() => dispatch({ type: "toggleComplete", payload: task.id })}>
+                  <button className="btn btn-success btn-sm" onClick={() => dispatch({ type: "TOGGLE_COMPLETE", payload: task.id })}>
                     Complete
                   </button>
-                  <button className="btn btn-dark btn-sm" onClick={() => dispatch({ type: "editTask", payload: task.id })}>
+                  <button className="btn btn-dark btn-sm" onClick={() => dispatch({ type: "EDIT_TASK", payload: task.id })}>
                     Edit
                   </button>
-                  <button className="btn btn-danger btn-sm" onClick={() => dispatch({ type: "deletetask", payload: task.id })}>
+                  <button className="btn btn-danger btn-sm" onClick={() => dispatch({ type: "DELETE_TASK", payload: task.id })}>
                     Delete
                   </button>
                 </td>
