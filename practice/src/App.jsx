@@ -8,6 +8,7 @@ import GreetingFunction from './components/GreetingFunction'
 import GreetingClass from './components/GreetingClass'
 import CountWithUSerEffect from './components/CountWithUSerEffect'
 import Card from './components/Card'
+import counterReducer from './components/counterReducer'
 
 
 const product ={pname :"Bat" ,image:"", price:100000,inStock :true}
@@ -17,22 +18,26 @@ const iphone ={pname :"Iphone", image :"", price:340000, instock:true }
 function App() {
   return (
     <>
+    
       {/* {/* <h2>learning React </h2> */}
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet eaque blanditiis dolores magni, omnis eum quisquam dicta sunt, fuga non voluptas eius voluptatum culpa quibusdam esse vel earum ad commodi.</p>
+      {/* <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet eaque blanditiis dolores magni, omnis eum quisquam dicta sunt, fuga non voluptas eius voluptatum culpa quibusdam esse vel earum ad commodi.</p>
       <img src={headerImage} alt="image not found" className='imgclass' />
     
     <GreetingFunction data="virat Kohali" age ={36} />
     <GreetingFunction data="Rohit Sharma" age={37}/>
-    <GreetingFunction data="KL Rahul" age={31}/>
+    <GreetingFunction data="KL Rahul" age={31}/> */}
 
     <hr />
-    <GreetingClass data="rohit Hitman"></GreetingClass> 
-    <Card product={product}></Card>  
+    {/* <GreetingClass data="rohit Hitman"></GreetingClass> 
+    <Card product={product}></Card>   */}
      {/* Passing product object as a prop */}
-     <Card iphone={iphone}></Card>
+     {/* <Card iphone={iphone}></Card> */}
 
     {/* When we say “send product as a prop”, it means we are passing an object (containing product details) from a parent component to a child component (like a Card component). */}
     {/* <CountWithUSerEffect/> */}
+
+    {/* <counterReducer></counterReducer> */}
+    <counterReducer ></counterReducer>
     </>
   )
 }
