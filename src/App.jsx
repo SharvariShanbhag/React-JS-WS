@@ -10,7 +10,8 @@ function App() {
   return (
     <div className="container mt-5">
       <h1 className="text-center text-primary">Task Manager</h1>
-      <AddTask dispatch={dispatch} state={state} />
+      <AddTask />
+      <ListTask />
     </div>
   );
 }
