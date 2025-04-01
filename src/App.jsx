@@ -1,19 +1,18 @@
-import React, { useReducer } from "react";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddTask from "./components/AddTask";
-import taskReducer from "./reducers/taskReducer";
+import ListTask from "./components/ListTask";
 
-const initialState = [];
-
-function App() {
-  const [state, dispatch] = useReducer(taskReducer, initialState);
-
+export default function App() {
   return (
-    <div className="container mt-5">
-      <h1 className="text-center text-primary">Task Manager</h1>
-      <AddTask />
-      <ListTask />
-    </div>
+    <Router>
+      <div className="container mt-4">
+        <h2 className="text-center">To-Do Application</h2>
+        <Routes>
+          <Route path="/" element={<ListTask />} />
+          <Route path="/add" element={<AddTask />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
-
-export default App;

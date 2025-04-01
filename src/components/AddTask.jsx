@@ -1,52 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { TaskContext } from "../context/TaskContext";
 
-const AddTask = ({ state, dispatch }) => { 
-  const [taskName, setTaskName] = useState("");
-  const [taskDescription, setTaskDescription] = useState("");
+export default function AddTask() {
+  const { dispatch } = useContext(TaskContext);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const navigate = useNavigate();
 
-  const handleAddTask = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!taskName || !taskDescription) return;
-    dispatch({ type: "ADD_TASK", payload: { taskname: taskName, taskDiscription: taskDescription } });
-    setTaskName("");
-    setTaskDescription("");
+    if (title && description) {
+      dispatch({
+        type: "ADD_TASK",
+        payload: { id: Date.now(), title, description, completed: false },
+      });
+      navigate("/");
+    }
   };
 
-  return(
+  return (
     <div className="container mt-4">
-            <form onSubmit={handleAddTask}>
-              <div className="mb-3">
-                <label htmlFor="taskName" className="form-label">
-                  Task Name
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  value={taskName}
-                  onChange={(e) => setTaskName(e.target.value)}
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="taskDesc" className="form-label">
-                  Task Description
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  value={taskDescription}
-                  onChange={(e) => setTaskDescription(e.target.value)}
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Add Task
-              </button>
-            </form>
-          </div>
-  )
-  
-};
-
-
-
-
-export default AddTask;
+      <h3 className="text-center">Add Task</h3>
+      <form onSubmit={handleSubmit} className="shadow p-4 rounded bg-light">
+        <input
+          type="text"
+          className="form-control mb-2"
+          placeholder="Title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          required
+        />
+        <textarea
+          className="form-control mb-2"
+          placeholder="Description"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          required
+        />
+        <button type="submit" className="btn btn-primary w-100">
+          Add Task
+        </button>
+      </form>
+    </div>
+  );
+}

@@ -1,0 +1,29 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+  }
+  
+  h3 {
+    color: #343a40;
+  }
+  
+  .list-group-item {
+    transition: 0.3s;
+  }
+  
+  .list-group-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .btn {
+    transition: 0.3s;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
